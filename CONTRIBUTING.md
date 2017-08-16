@@ -1,6 +1,6 @@
 # Contributing
 
-Information about contributing to the
+Information about contributing to the k8s
 [kubernetes code repo](README.md) lives in the
 [kubernetes community repo](https://github.com/kubernetes/community)
 (it's a big topic).
