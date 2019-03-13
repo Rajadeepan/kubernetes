@@ -555,7 +555,8 @@ var _ = SIGDescribe("DensityRaj", func() {
 	}
 
 	densityTests := []Density{
-		{podsPerNode: 30, runLatencyTest: true, kind: batch.Kind("Job")},
+                //change the podsPerNode to  1/2/5/30 ....  
+		{podsPerNode: 1, runLatencyTest: true, kind: batch.Kind("Job")},
 	}
 
 	isCanonical := func(test *Density) bool {
