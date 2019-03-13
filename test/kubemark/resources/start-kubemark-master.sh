@@ -85,6 +85,10 @@ function compute-etcd-variables {
 	fi
 }
 
+function compute-kube-batch-params {
+  echo "kube-batch"
+}
+
 # Formats the given device ($1) if needed and mounts it at given mount point
 # ($2).
 function safe-format-and-mount() {
