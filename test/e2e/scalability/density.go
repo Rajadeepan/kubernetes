@@ -57,7 +57,7 @@ const (
 	MinSaturationThreshold     = 2 * time.Minute
 	MinPodsPerSecondThroughput = 8
 	DensityPollInterval        = 10 * time.Second
-	MinPodStartupMeasurements  = 500
+	MinPodStartupMeasurements  = 100
 )
 
 // Maximum container failures this test tolerates before failing.
@@ -388,7 +388,7 @@ func cleanupDensityTest(dtc DensityTestConfig, testPhaseDurations *timer.TestPha
 // IMPORTANT: This test is designed to work on large (>= 100 Nodes) clusters. For smaller ones
 // results will not be representative for control-plane performance as we'll start hitting
 // limits on Docker's concurrent container startup.
-var _ = SIGDescribe("Density", func() {
+var _ = SIGDescribe("DensityRaj", func() {
 	var c clientset.Interface
 	var additionalPodsPrefix string
 	var ns string
@@ -555,25 +555,7 @@ var _ = SIGDescribe("Density", func() {
 	}
 
 	densityTests := []Density{
-		// TODO: Expose runLatencyTest as ginkgo flag.
-		{podsPerNode: 3, runLatencyTest: false, kind: api.Kind("ReplicationController")},
-		{podsPerNode: 30, runLatencyTest: true, kind: api.Kind("ReplicationController")},
-		{podsPerNode: 50, runLatencyTest: false, kind: api.Kind("ReplicationController")},
-		{podsPerNode: 95, runLatencyTest: true, kind: api.Kind("ReplicationController")},
-		{podsPerNode: 100, runLatencyTest: false, kind: api.Kind("ReplicationController")},
-		// Tests for other resource types:
-		{podsPerNode: 30, runLatencyTest: true, kind: extensions.Kind("Deployment")},
 		{podsPerNode: 30, runLatencyTest: true, kind: batch.Kind("Job")},
-		// Test scheduling when daemons are preset
-		{podsPerNode: 30, runLatencyTest: true, kind: api.Kind("ReplicationController"), daemonsPerNode: 2},
-		// Test with secrets
-		{podsPerNode: 30, runLatencyTest: true, kind: extensions.Kind("Deployment"), secretsPerPod: 2},
-		// Test with configmaps
-		{podsPerNode: 30, runLatencyTest: true, kind: extensions.Kind("Deployment"), configMapsPerPod: 2},
-		// Test with service account projected volumes
-		{podsPerNode: 30, runLatencyTest: true, kind: extensions.Kind("Deployment"), svcacctTokenProjectionsPerPod: 2},
-		// Test with quotas
-		{podsPerNode: 30, runLatencyTest: true, kind: api.Kind("ReplicationController"), quotas: true},
 	}
 
 	isCanonical := func(test *Density) bool {
@@ -858,6 +840,10 @@ var _ = SIGDescribe("Density", func() {
 					for i := 1; i <= nodeCount; i++ {
 						name := additionalPodsPrefix + "-" + strconv.Itoa(podIndexOffset+i)
 						nsName := namespaces[i%len(namespaces)].Name
+                                                //uncomment the below line while test for kube batch
+						/*if _, ok := rcNameToNsMap[name]; !ok{
+						 testutils.CreateResourcePodGroupWithRetries(c, ns,nil)
+						}*/
 						rcNameToNsMap[name] = nsName
 						go createRunningPodFromRC(&wg, c, name, nsName, imageutils.GetPauseImageName(), additionalPodsPrefix, cpuRequest, memRequest)
 						time.Sleep(200 * time.Millisecond)
@@ -903,18 +889,23 @@ var _ = SIGDescribe("Density", func() {
 				close(stopCh)
 
 				for i := 0; i < len(namespaces); i++ {
+                                        //uncomment the below line while test for kube batch (to get all the events) 
+                         		//time.Sleep(5 * time.Minute)
 					nsName := namespaces[i].Name
 					selector := fields.Set{
 						"involvedObject.kind":      "Pod",
 						"involvedObject.namespace": nsName,
+                                                //comment the belwo line while test for kube batch 
 						"source":                   v1.DefaultSchedulerName,
+                                               //uncomment the below line while test for kube batch 
+                                                //"source":                 "kube-batch",
 					}.AsSelector().String()
 					options := metav1.ListOptions{FieldSelector: selector}
 					schedEvents, err := c.CoreV1().Events(nsName).List(options)
 					framework.ExpectNoError(err)
 					for k := range createTimes {
 						for _, event := range schedEvents.Items {
-							if event.InvolvedObject.Name == k {
+                                                        if event.InvolvedObject.Name == k {
 								scheduleTimes[k] = event.FirstTimestamp
 								break
 							}
@@ -1011,6 +1002,8 @@ func createRunningPodFromRC(wg *sync.WaitGroup, c clientset.Interface, name, ns,
 			Template: &v1.PodTemplateSpec{
 				ObjectMeta: metav1.ObjectMeta{
 					Labels: labels,
+                                        //uncomment the below line while test for kube batch
+					//Annotations: map[string]string{"scheduling.k8s.io/group-name" : "qj-1"},
 				},
 				Spec: v1.PodSpec{
 					Containers: []v1.Container{
@@ -1026,6 +1019,8 @@ func createRunningPodFromRC(wg *sync.WaitGroup, c clientset.Interface, name, ns,
 						},
 					},
 					DNSPolicy: v1.DNSDefault,
+                                        //uncomment the below line while test for kube batch
+                                        //SchedulerName: "kube-batch",
 				},
 			},
 		},
