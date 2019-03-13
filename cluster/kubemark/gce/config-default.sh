@@ -24,7 +24,7 @@ source "${KUBE_ROOT}/cluster/gce/config-common.sh"
 GCLOUD=gcloud
 ZONE=${KUBE_GCE_ZONE:-us-central1-b}
 REGION=${ZONE%-*}
-NUM_NODES=${KUBEMARK_NUM_NODES:-10}
+NUM_NODES=${KUBEMARK_NUM_NODES:-100}
 NUM_WINDOWS_NODES=${KUBEMARK_NUM_WINDOWS_NODES:-0}
 MASTER_SIZE=${KUBEMARK_MASTER_SIZE:-n1-standard-$(get-master-size)}
 MASTER_DISK_TYPE=pd-ssd
@@ -47,7 +47,7 @@ if [[ "${NODE_OS_DISTRIBUTION}" == "debian" ]]; then
     NODE_ACCELERATORS=""
 fi
 
-NETWORK=${KUBE_GCE_NETWORK:-e2e}
+NETWORK=${KUBE_GCE_NETWORK:-default}
 if [[ "${CREATE_CUSTOM_NETWORK}" == true ]]; then
   SUBNETWORK="${SUBNETWORK:-${NETWORK}-custom-subnet}"
 fi

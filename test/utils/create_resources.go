@@ -29,6 +29,12 @@ import (
 	utilnet "k8s.io/apimachinery/pkg/util/net"
 	"k8s.io/apimachinery/pkg/util/wait"
 	clientset "k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/tools/clientcmd"
+	"path/filepath"
+	kbver "github.com/kubernetes-sigs/kube-batch/pkg/client/clientset/versioned"
+	kbv1 "github.com/kubernetes-sigs/kube-batch/pkg/apis/scheduling/v1alpha1"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+        "os"
 )
 
 const (
@@ -231,4 +237,50 @@ func CreateResourceQuotaWithRetries(c clientset.Interface, namespace string, obj
 		return false, fmt.Errorf("Failed to create object with non-retriable error: %v", err)
 	}
 	return RetryWithExponentialBackOff(createFunc)
+}
+
+func goPath() string {
+	if h := os.Getenv("GOPATH"); h != "" {
+		return h
+	}
+	return ""
+}
+
+func CreateResourcePodGroupWithRetries(c clientset.Interface, namespace string, obj *batch.Job) error {
+        gopath := goPath()
+	if gopath == ""{
+		fmt.Println("Error while getting gopath")
+	}
+	config, err := clientcmd.BuildConfigFromFlags("", filepath.Join(gopath, "k8s.io/kubernetes/test/kubemark/resources", "kubeconfig.kubemark"))
+	if err != nil {
+		fmt.Println("Error", err)
+	}
+
+	kbclient := kbver.NewForConfigOrDie(config)
+
+
+	pg := &kbv1.PodGroup{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "qj-1",
+			Namespace: namespace,
+		},
+		Spec: kbv1.PodGroupSpec{
+			MinMember: 6,
+		},
+	}
+
+
+	createFunc := func() (bool, error) {
+		_, err := kbclient.Scheduling().PodGroups(pg.Namespace).Create(pg)
+		if err == nil || apierrs.IsAlreadyExists(err) {
+			return true, nil
+		}
+		if IsRetryableAPIError(err) {
+			return false, nil
+		}
+		return false, fmt.Errorf("Failed to create object with non-retriable error: %v", err)
+	}
+	return RetryWithExponentialBackOff(createFunc)
+
+
 }

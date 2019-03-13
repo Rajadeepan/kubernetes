@@ -85,6 +85,10 @@ function compute-etcd-variables {
 	fi
 }
 
+function compute-kube-batch-params {
+  echo "kube-batch"
+}
+
 # Formats the given device ($1) if needed and mounts it at given mount point
 # ($2).
 function safe-format-and-mount() {
@@ -716,6 +720,9 @@ start-kubemaster-component "kube-apiserver"
 start-kubemaster-component "kube-controller-manager"
 start-kubemaster-component "kube-scheduler"
 start-kubemaster-component "kube-addon-manager"
+
+cp /home/kubernetes/kubeconfig.kubemark /etc/srv/kubernetes
+start-kubemaster-component "kube-batch"
 
 # Wait till apiserver is working fine or timeout.
 echo -n "Waiting for apiserver to be healthy"

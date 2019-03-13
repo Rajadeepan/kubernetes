@@ -42,12 +42,11 @@ import (
 	clientset "k8s.io/client-go/kubernetes"
 	scaleclient "k8s.io/client-go/scale"
 	"k8s.io/client-go/util/workqueue"
+	"k8s.io/klog"
 	batchinternal "k8s.io/kubernetes/pkg/apis/batch"
 	api "k8s.io/kubernetes/pkg/apis/core"
 	extensionsinternal "k8s.io/kubernetes/pkg/apis/extensions"
 	"k8s.io/kubernetes/pkg/client/clientset_generated/internalclientset"
-
-	"k8s.io/klog"
 )
 
 const (
@@ -458,7 +457,10 @@ func (config *JobConfig) create() error {
 			Template: v1.PodTemplateSpec{
 				ObjectMeta: metav1.ObjectMeta{
 					Labels:      map[string]string{"name": config.Name},
+                                       //comment the below line while test for kube batch 
 					Annotations: config.Annotations,
+					//uncomment the below line while test for kube batch
+					//Annotations: map[string]string{"scheduling.k8s.io/group-name" : "qj-1"},
 				},
 				Spec: v1.PodSpec{
 					Affinity: config.Affinity,
@@ -470,6 +472,8 @@ func (config *JobConfig) create() error {
 						},
 					},
 					RestartPolicy: v1.RestartPolicyOnFailure,
+					//uncomment the below line while test for kube batch
+					//SchedulerName: "kube-batch",
 				},
 			},
 		},
@@ -488,6 +492,10 @@ func (config *JobConfig) create() error {
 		return fmt.Errorf("Error creating job: %v", err)
 	}
 	config.RCConfigLog("Created job with name: %v, namespace: %v, parallelism/completions: %v", job.Name, config.Namespace, job.Spec.Parallelism)
+	//uncomment the below line while test for kube batch
+	/*if err := CreateResourcePodGroupWithRetries(config.Client, config.Namespace, job); err != nil{
+		return fmt.Errorf("Error creating PodGroup: %v", err)
+	}*/
 	return nil
 }
 

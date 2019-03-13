@@ -180,6 +180,7 @@ function copy-resource-files-to-master {
     "${RESOURCE_DIRECTORY}/manifests/etcd-events.yaml" \
     "${RESOURCE_DIRECTORY}/manifests/kube-apiserver.yaml" \
     "${RESOURCE_DIRECTORY}/manifests/kube-scheduler.yaml" \
+    "${RESOURCE_DIRECTORY}/manifests/kube-batch.yaml" \
     "${RESOURCE_DIRECTORY}/manifests/kube-controller-manager.yaml" \
     "${RESOURCE_DIRECTORY}/manifests/kube-addon-manager.yaml" \
     "${RESOURCE_DIRECTORY}/manifests/addons/kubemark-rbac-bindings" \
@@ -473,6 +474,14 @@ get-or-create-master-ip
 generate-pki-config
 write-local-kubeconfig
 
+
+function create-podgroup-queue {
+  podgroup=$("${KUBECTL}" --kubeconfig="${LOCAL_KUBECONFIG}" create -f  "${RESOURCE_DIRECTORY}"/podgroup.yaml 2> /dev/null) || true
+  queue=$("${KUBECTL}" --kubeconfig="${LOCAL_KUBECONFIG}" create -f  "${RESOURCE_DIRECTORY}"/queue.yaml 2> /dev/null) || true
+
+}
+
+
 # Setup for master.
 function start-master {
   echo -e "${color_yellow}STARTING SETUP FOR MASTER${color_norm}"
@@ -482,6 +491,7 @@ function start-master {
   write-pki-config-to-master
   copy-resource-files-to-master
   start-master-components
+  create-podgroup-queue
 }
 start-master &
 
@@ -493,6 +503,7 @@ function start-hollow-nodes {
   wait-for-hollow-nodes-to-run-or-timeout
 }
 start-hollow-nodes &
+
 
 wait
 echo ""
