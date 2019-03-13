@@ -1,0 +1,784 @@
+Kubemark master name: kubernetes-kubemark-master
+Raj: Inside else condition
+-ginkgo.focus=Density –gather-metrics-at-teardown=true –output-print-type=json –report-dir=/home/root1/Rajadeepan/src/k8s.io/kubernetes/test/kubemark
+Setting up for KUBERNETES_PROVIDER="kubemark".
+I0219 05:30:03.071737   29649 e2e.go:233] Starting e2e run "67c70bff-3407-11e9-b5ff-42010aa00003" on Ginkgo node 1
+Running Suite: Kubernetes e2e suite
+===================================
+Random Seed: [1m1550554202[0m - Will randomize all specs
+Will run [1m2[0m of [1m2933[0m specs
+
+Feb 19 05:30:03.229: INFO: >>> kubeConfig: /home/root1/Rajadeepan/src/k8s.io/kubernetes/test/kubemark/resources/kubeconfig.kubemark
+Feb 19 05:30:03.234: INFO: Waiting up to 30m0s for all (but 0) nodes to be schedulable
+Feb 19 05:30:04.488: INFO: Waiting up to 10m0s for all pods (need at least 0) in namespace 'kube-system' to be running and ready
+Feb 19 05:30:05.256: INFO: 0 / 0 pods in namespace 'kube-system' are running and ready (0 seconds elapsed)
+Feb 19 05:30:05.256: INFO: expected 0 pod replicas in namespace 'kube-system', 0 are Running and Ready.
+Feb 19 05:30:05.256: INFO: Waiting up to 5m0s for all daemonsets in namespace 'kube-system' to start
+Feb 19 05:30:05.512: INFO: e2e test version: v1.14.0-alpha.2.509+69cf2684bb8046-dirty
+Feb 19 05:30:05.761: INFO: kube-apiserver version: v1.14.0-alpha.2.509+69cf2684bb8046-dirty
+[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m
+[90m------------------------------[0m
+[0m[sig-windows] [Feature:Windows] Density [Serial] [Slow][0m [90mcreate a batch of pods[0m 
+  [1mlatency/resource should be within limit when create 10 pods with 0s interval[0m
+  [37m/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/windows/density.go:69[0m
+[BeforeEach] [sig-windows] [Feature:Windows] Density [Serial] [Slow]
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/framework/framework.go:155
+[1mSTEP[0m: Creating a kubernetes client
+Feb 19 05:30:05.769: INFO: >>> kubeConfig: /home/root1/Rajadeepan/src/k8s.io/kubernetes/test/kubemark/resources/kubeconfig.kubemark
+[1mSTEP[0m: Building a namespace api object, basename density-test-windows
+Feb 19 05:30:06.544: INFO: No PodSecurityPolicies found; assuming PodSecurityPolicy is disabled.
+Feb 19 05:30:06.544: INFO: Skipping waiting for service account
+[BeforeEach] [sig-windows] [Feature:Windows] Density [Serial] [Slow]
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/windows/density.go:43
+Feb 19 05:30:06.544: INFO: Only supported for node OS distro [windows] (not gci)
+[AfterEach] [sig-windows] [Feature:Windows] Density [Serial] [Slow]
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/framework/framework.go:156
+Feb 19 05:30:06.545: INFO: Waiting up to 3m0s for all (but 0) nodes to be ready
+[1mSTEP[0m: Destroying namespace "density-test-windows-5937" for this suite.
+Feb 19 05:30:13.549: INFO: Waiting up to 30s for server preferred namespaced resources to be successfully discovered
+Feb 19 05:30:22.292: INFO: namespace density-test-windows-5937 deletion completed in 15.495276796s
+
+[36m[1mS [SKIPPING] in Spec Setup (BeforeEach) [16.524 seconds][0m
+[sig-windows] [Feature:Windows] Density [Serial] [Slow]
+[90m/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/windows/framework.go:22[0m
+  [36m[1mcreate a batch of pods [BeforeEach][0m
+  [90m/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/windows/density.go:48[0m
+    latency/resource should be within limit when create 10 pods with 0s interval
+    [90m/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/windows/density.go:69[0m
+
+    [36mOnly supported for node OS distro [windows] (not gci)[0m
+
+    /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/windows/density.go:45
+[90m------------------------------[0m
+[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m
+[90m------------------------------[0m
+[0m[sig-scalability] Density[0m 
+  [1m[Feature:ManualPerformance] should allow starting 3 pods per node using ReplicationController with 0 secrets, 0 configmaps, 0 token projections, and 0 daemons[0m
+  [37m/go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/scalability/density.go:611[0m
+[BeforeEach] [sig-scalability] Density
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/framework/framework.go:155
+[1mSTEP[0m: Creating a kubernetes client
+Feb 19 05:30:22.299: INFO: >>> kubeConfig: /home/root1/Rajadeepan/src/k8s.io/kubernetes/test/kubemark/resources/kubeconfig.kubemark
+[1mSTEP[0m: Building a namespace api object, basename density
+Feb 19 05:30:22.802: INFO: Skipping waiting for service account
+[BeforeEach] [sig-scalability] Density
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/scalability/density.go:486
+Feb 19 05:30:23.303: INFO: Waiting for terminating namespaces to be deleted...
+Feb 19 05:30:26.873: INFO: Resetting latency metrics in apiserver...
+Feb 19 05:30:27.122: INFO: Listing nodes for easy debugging:
+
+Feb 19 05:30:27.122: INFO: Name: hollow-node-4xscl, clusterIP: 10.40.0.14, externalIP: 
+Feb 19 05:30:27.122: INFO: Name: hollow-node-4zw29, clusterIP: 10.40.0.3, externalIP: 
+Feb 19 05:30:27.122: INFO: Name: hollow-node-65nzx, clusterIP: 10.40.0.11, externalIP: 
+Feb 19 05:30:27.122: INFO: Name: hollow-node-8fwnx, clusterIP: 10.40.0.4, externalIP: 
+Feb 19 05:30:27.122: INFO: Name: hollow-node-bl84c, clusterIP: 10.40.0.6, externalIP: 
+Feb 19 05:30:27.122: INFO: Name: hollow-node-cdwsf, clusterIP: 10.40.0.8, externalIP: 
+Feb 19 05:30:27.122: INFO: Name: hollow-node-kln75, clusterIP: 10.40.0.5, externalIP: 
+Feb 19 05:30:27.122: INFO: Name: hollow-node-p95ss, clusterIP: 10.40.0.9, externalIP: 
+Feb 19 05:30:27.122: INFO: Name: hollow-node-pc5tx, clusterIP: 10.40.0.12, externalIP: 
+Feb 19 05:30:27.122: INFO: Name: hollow-node-zr4rj, clusterIP: 10.40.0.10, externalIP: 
+[It] [Feature:ManualPerformance] should allow starting 3 pods per node using ReplicationController with 0 secrets, 0 configmaps, 0 token projections, and 0 daemons
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/scalability/density.go:611
+Feb 19 05:30:27.873: INFO: >>> kubeConfig: /home/root1/Rajadeepan/src/k8s.io/kubernetes/test/kubemark/resources/kubeconfig.kubemark
+Feb 19 05:30:27.875: INFO: >>> kubeConfig: /home/root1/Rajadeepan/src/k8s.io/kubernetes/test/kubemark/resources/kubeconfig.kubemark
+Feb 19 05:30:27.877: INFO: >>> kubeConfig: /home/root1/Rajadeepan/src/k8s.io/kubernetes/test/kubemark/resources/kubeconfig.kubemark
+Feb 19 05:30:28.884: INFO: Created replication controller with name: density30-0-7480f24a-3407-11e9-b5ff-42010aa00003, namespace: density-3-1-7319, replica count: 30
+I0219 05:30:28.884492   29649 runners.go:184] Created replication controller with name: density30-0-7480f24a-3407-11e9-b5ff-42010aa00003, namespace: density-3-1-7319, replica count: 30
+Feb 19 05:30:38.879: INFO: Density Pods: 30 out of 30 created, 30 running, 0 pending, 0 waiting, 0 inactive, 0 terminating, 0 unknown, 0 runningButNotReady 
+Feb 19 05:30:39.385: INFO: E2E startup time for 30 pods: 11.506283899s
+Feb 19 05:30:39.385: INFO: Throughput (pods/s) during cluster saturation phase: 2.7272727
+Feb 19 05:30:39.385: INFO: Failed to gather kube-batch memory profile: Profile gathering pre-requisite failed: Can't gather profiles as --report-dir is empty
+[1mSTEP[0m: Printing Pod to Node allocation data
+Feb 19 05:30:39.638: INFO: hollow-node-4xscl: 3 pause pods, system pods: []
+Feb 19 05:30:39.638: INFO: hollow-node-4zw29: 3 pause pods, system pods: []
+Feb 19 05:30:39.638: INFO: hollow-node-65nzx: 3 pause pods, system pods: []
+Feb 19 05:30:39.638: INFO: hollow-node-8fwnx: 3 pause pods, system pods: []
+Feb 19 05:30:39.638: INFO: hollow-node-bl84c: 3 pause pods, system pods: []
+Feb 19 05:30:39.638: INFO: hollow-node-cdwsf: 3 pause pods, system pods: []
+Feb 19 05:30:39.638: INFO: hollow-node-kln75: 3 pause pods, system pods: []
+Feb 19 05:30:39.638: INFO: hollow-node-p95ss: 3 pause pods, system pods: []
+Feb 19 05:30:39.638: INFO: hollow-node-pc5tx: 3 pause pods, system pods: []
+Feb 19 05:30:39.638: INFO: hollow-node-zr4rj: 3 pause pods, system pods: []
+[1mSTEP[0m: Deleting created Collections
+[1mSTEP[0m: Cleaning up only the ReplicationController, garbage collector will clean up the pods
+[1mSTEP[0m: deleting ReplicationController density30-0-7480f24a-3407-11e9-b5ff-42010aa00003 in namespace density-3-1-7319, will wait for the garbage collector to delete the pods
+Feb 19 05:30:40.438: INFO: Deleting ReplicationController density30-0-7480f24a-3407-11e9-b5ff-42010aa00003 took: 250.929161ms
+Feb 19 05:30:42.138: INFO: Terminating ReplicationController density30-0-7480f24a-3407-11e9-b5ff-42010aa00003 pods took: 1.700291466s
+[AfterEach] [sig-scalability] Density
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/scalability/density.go:414
+Feb 19 05:30:49.599: INFO: Failed to gather kube-apiserver memory profile: Profile gathering pre-requisite failed: Can't gather profiles as --report-dir is empty
+Feb 19 05:30:49.599: INFO: Cluster saturation time: {
+  "timeToSaturate": 11506283899,
+  "numberOfNodes": 10,
+  "numberOfPods": 30,
+  "throughput": 2.7272727
+}
+
+Feb 19 05:30:49.953: INFO: Top latency metric: {Resource:pods Subresource: Verb:POST Scope:namespace Latency:{Perc50:7.517ms Perc90:33.846ms Perc99:35.279ms Perc100:0s} Count:30}
+Feb 19 05:30:49.953: INFO: Top latency metric: {Resource:pods Subresource: Verb:DELETE Scope:namespace Latency:{Perc50:7.4ms Perc90:21.98ms Perc99:31.241ms Perc100:0s} Count:60}
+Feb 19 05:30:49.953: INFO: Top latency metric: {Resource:pods Subresource:binding Verb:POST Scope:namespace Latency:{Perc50:6.458ms Perc90:15.405ms Perc99:20.061ms Perc100:0s} Count:30}
+Feb 19 05:30:49.953: INFO: Top latency metric: {Resource:pods Subresource: Verb:GET Scope:namespace Latency:{Perc50:1.335ms Perc90:4.111ms Perc99:17.227ms Perc100:0s} Count:212}
+Feb 19 05:30:49.953: INFO: Top latency metric: {Resource:pods Subresource:status Verb:PATCH Scope:namespace Latency:{Perc50:3.846ms Perc90:7.68ms Perc99:14.444ms Perc100:0s} Count:148}
+Feb 19 05:30:57.034: INFO: Printing summary: APIResponsiveness
+Feb 19 05:30:57.034: INFO: APIResponsiveness JSON
+{
+  "version": "v1",
+  "dataItems": [
+    {
+      "data": {
+        "Perc50": 7.517,
+        "Perc90": 33.846,
+        "Perc99": 35.279
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "30",
+        "Resource": "pods",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "POST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 7.4,
+        "Perc90": 21.98,
+        "Perc99": 31.241
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "60",
+        "Resource": "pods",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "DELETE"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 6.458,
+        "Perc90": 15.405,
+        "Perc99": 20.061
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "30",
+        "Resource": "pods",
+        "Scope": "namespace",
+        "Subresource": "binding",
+        "Verb": "POST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 1.335,
+        "Perc90": 4.111,
+        "Perc99": 17.227
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "212",
+        "Resource": "pods",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "GET"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 3.846,
+        "Perc90": 7.68,
+        "Perc99": 14.444
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "148",
+        "Resource": "pods",
+        "Scope": "namespace",
+        "Subresource": "status",
+        "Verb": "PATCH"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 3.204,
+        "Perc90": 4,
+        "Perc99": 6.747
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "77",
+        "Resource": "pods",
+        "Scope": "cluster",
+        "Subresource": "",
+        "Verb": "LIST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 2.264,
+        "Perc90": 2.597,
+        "Perc99": 4.831
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "22",
+        "Resource": "leases",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "PUT"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 2.068,
+        "Perc90": 4.235,
+        "Perc99": 4.822
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "36",
+        "Resource": "replicationcontrollers",
+        "Scope": "namespace",
+        "Subresource": "status",
+        "Verb": "PUT"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 1.81,
+        "Perc90": 2.727,
+        "Perc99": 4.406
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "23",
+        "Resource": "endpoints",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "PUT"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 3.099,
+        "Perc90": 3.099,
+        "Perc99": 3.099
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "serviceaccounts",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "POST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 2.931,
+        "Perc90": 2.931,
+        "Perc99": 2.931
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "nodes",
+        "Scope": "cluster",
+        "Subresource": "status",
+        "Verb": "PATCH"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 2.622,
+        "Perc90": 2.622,
+        "Perc99": 2.622
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "replicationcontrollers",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "POST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 2.47,
+        "Perc90": 2.47,
+        "Perc99": 2.47
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "secrets",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "POST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 0.507,
+        "Perc90": 1.493,
+        "Perc99": 2.409
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "30",
+        "Resource": "nodes",
+        "Scope": "cluster",
+        "Subresource": "",
+        "Verb": "GET"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 2.392,
+        "Perc90": 2.392,
+        "Perc99": 2.392
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "replicationcontrollers",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "DELETE"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 2.044,
+        "Perc90": 2.044,
+        "Perc99": 2.044
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "serviceaccounts",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "PUT"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 1.043,
+        "Perc90": 1.377,
+        "Perc99": 1.935
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "26",
+        "Resource": "endpoints",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "GET"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 1.381,
+        "Perc90": 1.609,
+        "Perc99": 1.609
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "3",
+        "Resource": "nodes",
+        "Scope": "cluster",
+        "Subresource": "",
+        "Verb": "LIST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 0.988,
+        "Perc90": 1.293,
+        "Perc99": 1.487
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "22",
+        "Resource": "leases",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "GET"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 1.247,
+        "Perc90": 1.247,
+        "Perc99": 1.247
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "namespaces",
+        "Scope": "cluster",
+        "Subresource": "",
+        "Verb": "POST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 1.085,
+        "Perc90": 1.085,
+        "Perc99": 1.085
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "namespaces",
+        "Scope": "cluster",
+        "Subresource": "",
+        "Verb": "LIST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 1.083,
+        "Perc90": 1.083,
+        "Perc99": 1.083
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "2",
+        "Resource": "jobs",
+        "Scope": "cluster",
+        "Subresource": "",
+        "Verb": "LIST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 1.08,
+        "Perc90": 1.08,
+        "Perc99": 1.08
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "2",
+        "Resource": "pods",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "LIST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 1.071,
+        "Perc90": 1.071,
+        "Perc99": 1.071
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "limitranges",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "LIST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 1.055,
+        "Perc90": 1.055,
+        "Perc99": 1.055
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "persistentvolumes",
+        "Scope": "cluster",
+        "Subresource": "",
+        "Verb": "LIST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 0.96,
+        "Perc90": 1.019,
+        "Perc99": 1.019
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "4",
+        "Resource": "replicationcontrollers",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "GET"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 0.86,
+        "Perc90": 0.987,
+        "Perc99": 0.987
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "6",
+        "Resource": "clusterrolebindings",
+        "Scope": "cluster",
+        "Subresource": "",
+        "Verb": "GET"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 0.86,
+        "Perc90": 0.884,
+        "Perc99": 0.884
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "3",
+        "Resource": "namespaces",
+        "Scope": "cluster",
+        "Subresource": "",
+        "Verb": "GET"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 0.854,
+        "Perc90": 0.854,
+        "Perc99": 0.854
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "serviceaccounts",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "GET"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 0.718,
+        "Perc90": 0.718,
+        "Perc99": 0.718
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "2",
+        "Resource": "cronjobs",
+        "Scope": "cluster",
+        "Subresource": "",
+        "Verb": "LIST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 0.713,
+        "Perc90": 0.713,
+        "Perc99": 0.713
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "2",
+        "Resource": "services",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "GET"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 0.637,
+        "Perc90": 0.637,
+        "Perc99": 0.637
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "1",
+        "Resource": "resourcequotas",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "LIST"
+      }
+    },
+    {
+      "data": {
+        "Perc50": 0.179,
+        "Perc90": 0.359,
+        "Perc99": 0.359
+      },
+      "unit": "ms",
+      "labels": {
+        "Count": "10",
+        "Resource": "secrets",
+        "Scope": "namespace",
+        "Subresource": "",
+        "Verb": "LIST"
+      }
+    }
+  ]
+}
+
+Feb 19 05:30:57.034: INFO: Finished
+Feb 19 05:30:57.034: INFO: Printing summary: SchedulingMetrics
+Feb 19 05:30:57.034: INFO: SchedulingMetrics JSON
+{
+  "predicateEvaluationLatency": {
+    "Perc50": 126646,
+    "Perc90": 176212,
+    "Perc99": 211714,
+    "Perc100": 0
+  },
+  "priorityEvaluationLatency": {
+    "Perc50": 150024,
+    "Perc90": 203140,
+    "Perc99": 239650,
+    "Perc100": 0
+  },
+  "preemptionEvaluationLatency": {
+    "Perc50": 0,
+    "Perc90": 0,
+    "Perc99": 0,
+    "Perc100": 0
+  },
+  "bindingLatency": {
+    "Perc50": 14697421,
+    "Perc90": 29537442,
+    "Perc99": 40338664,
+    "Perc100": 0
+  },
+  "throughputAverage": 0,
+  "throughputPerc50": 0,
+  "throughputPerc90": 0,
+  "throughputPerc99": 0
+}
+
+Feb 19 05:30:57.034: INFO: Finished
+Feb 19 05:30:57.034: INFO: Printing summary: EtcdMetrics
+Feb 19 05:30:57.035: INFO: EtcdMetrics JSON
+{
+  "backendCommitDuration": [
+    {
+      "labels": {
+        "__name__": "etcd_disk_backend_commit_duration_seconds_bucket"
+      },
+      "buckets": {
+        "+Inf": 3302,
+        "0.001": 0,
+        "0.002": 1302,
+        "0.004": 3134,
+        "0.008": 3279,
+        "0.016": 3288,
+        "0.032": 3292,
+        "0.064": 3295,
+        "0.128": 3299,
+        "0.256": 3300,
+        "0.512": 3302,
+        "1.024": 3302,
+        "2.048": 3302,
+        "4.096": 3302,
+        "8.192": 3302
+      }
+    }
+  ],
+  "snapshotSaveTotalDuration": [
+    {
+      "labels": {
+        "__name__": "etcd_debugging_snap_save_total_duration_seconds_bucket"
+      },
+      "buckets": {
+        "+Inf": 0,
+        "0.001": 0,
+        "0.002": 0,
+        "0.004": 0,
+        "0.008": 0,
+        "0.016": 0,
+        "0.032": 0,
+        "0.064": 0,
+        "0.128": 0,
+        "0.256": 0,
+        "0.512": 0,
+        "1.024": 0,
+        "2.048": 0,
+        "4.096": 0,
+        "8.192": 0
+      }
+    }
+  ],
+  "peerRoundTripTime": [],
+  "walFsyncDuration": [
+    {
+      "labels": {
+        "__name__": "etcd_disk_wal_fsync_duration_seconds_bucket"
+      },
+      "buckets": {
+        "+Inf": 5119,
+        "0.001": 708,
+        "0.002": 3033,
+        "0.004": 4847,
+        "0.008": 5080,
+        "0.016": 5091,
+        "0.032": 5093,
+        "0.064": 5113,
+        "0.128": 5116,
+        "0.256": 5119,
+        "0.512": 5119,
+        "1.024": 5119,
+        "2.048": 5119,
+        "4.096": 5119,
+        "8.192": 5119
+      }
+    }
+  ],
+  "maxDatabaseSize": 0
+}
+
+Feb 19 05:30:57.035: INFO: Finished
+Feb 19 05:30:57.035: INFO: Printing summary: TestPhaseTimer
+Feb 19 05:30:57.035: INFO: TestPhaseTimer JSON
+{
+  "version": "v1",
+  "dataItems": [
+    {
+      "data": {
+        "100-node preparation": 0.250981248,
+        "200-namespace creation": 0.499963158,
+        "250-secrets creation": 0.000001345,
+        "260-configmaps creation": 3.51e-7,
+        "270-daemonsets creation": 5.12e-7,
+        "300-saturation pods creation": 11.506369732,
+        "400-printing pod allocation": 0.253091539,
+        "900-latency pods deletion": 7.200948118,
+        "910-secrets deletion": 0.000004894,
+        "920-configmaps deletion": 3.99e-7,
+        "930-daemonsets deletion": 7.15e-7
+      },
+      "unit": "s",
+      "labels": {
+        "test": "phases"
+      }
+    }
+  ]
+}
+
+Feb 19 05:30:57.035: INFO: Finished
+[AfterEach] [sig-scalability] Density
+  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/framework/framework.go:156
+Feb 19 05:30:57.035: INFO: Waiting up to 3m0s for all (but 0) nodes to be ready
+[1mSTEP[0m: Destroying namespace "density-6095" for this suite.
+Feb 19 05:31:04.037: INFO: Waiting up to 30s for server preferred namespaced resources to be successfully discovered
+Feb 19 05:31:12.791: INFO: namespace density-6095 deletion completed in 15.505576085s
+[1mSTEP[0m: Destroying namespace "density-3-1-7319" for this suite.
+Feb 19 05:31:19.542: INFO: Waiting up to 30s for server preferred namespaced resources to be successfully discovered
+Feb 19 05:31:28.292: INFO: namespace density-3-1-7319 deletion completed in 15.500918476s
+[32m•[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0mFeb 19 05:31:28.296: INFO: Running AfterSuite actions on all nodes
+Feb 19 05:31:28.296: INFO: Running AfterSuite actions on node 1
+
+[1m[32mRan 1 of 2933 Specs in 85.067 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m1 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m2932 Skipped[0m PASS
+
+Ginkgo ran 1 suite in 1m26.17143281s
+Test Suite Passed
